@@ -8,6 +8,6 @@
 import Foundation
 
 struct Follower: Codable {
-    let id: Int
-    let login, avatarURL: String
+    let login: String
+    let avatarUrl: String?
 }
