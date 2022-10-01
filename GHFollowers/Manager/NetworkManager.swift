@@ -33,7 +33,6 @@ class NetworkManager {
             throw GFNetworkErrors.invalidResponse
         }
         do {
-            print(data as Any)
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let item = try decoder.decode(T.self, from: data)
             return item
@@ -41,8 +40,15 @@ class NetworkManager {
             throw GFNetworkErrors.decodingError
         }
     }
-}
-
-enum GFNetworkErrors: CustomNSError {
-    case invalidResponse, decodingError
+    
+    func downloadImage(from url: URL?) async -> Data? {
+        guard let url else { return nil }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            return data
+        } catch {
+            print(error.localizedDescription)
+            return nil
+        }
+    }
 }

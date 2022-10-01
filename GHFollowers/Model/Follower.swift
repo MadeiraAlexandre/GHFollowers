@@ -7,7 +7,14 @@
 
 import Foundation
 
-struct Follower: Codable {
+struct Follower: Codable, Hashable {
     let login: String
     let avatarUrl: String?
+}
+
+extension Follower {
+    var imageUrl: URL? {
+        guard let avatarUrl else { return nil }
+        return URL(string: avatarUrl)
+    }
 }
