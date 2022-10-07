@@ -8,6 +8,7 @@
 import UIKit
 
 class GFAvatarImageView: UIImageView {
+    private let cache = NetworkManager.shared.cache
     private let placeholderImage = UIImage(named: "GH-Empty")!
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,13 +26,18 @@ class GFAvatarImageView: UIImageView {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func loadImage(for url: URL?) {
+    func loadImage(for value: String) {
+        let cacheKey = NSString(string: value)
+        if let image = cache.object(forKey: cacheKey) {
+            self.image = image
+            return
+        }
+        guard let url = URL(string: value) else { return }
         Task {
             let image = await NetworkManager.shared.downloadImage(from: url)
             guard let image else { return }
-            DispatchQueue.main.async {
-                self.image = UIImage(data: image)
-            }
+            cache.setObject(image, forKey: cacheKey)
+            DispatchQueue.main.async { self.image = image }
         }
     }
 }

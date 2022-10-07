@@ -5,10 +5,11 @@
 //  Created by Alexandre Madeira on 20/09/22.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManager {
     static let shared = NetworkManager()
+    let cache = NSCache<NSString, UIImage>()
     private let decoder = JSONDecoder()
     private let baseUrl = "https://api.github.com/users"
     
@@ -41,11 +42,12 @@ class NetworkManager {
         }
     }
     
-    func downloadImage(from url: URL?) async -> Data? {
+    func downloadImage(from url: URL?) async -> UIImage? {
         guard let url else { return nil }
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            return data
+            let image = UIImage(data: data)
+            return image
         } catch {
             print(error.localizedDescription)
             return nil
