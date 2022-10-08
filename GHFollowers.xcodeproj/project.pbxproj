@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B81DADEF28E8CA3F00FB46A8 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DADEE28E8CA3F00FB46A8 /* UIHelper.swift */; };
+		B88DE6AE28F0F34500FB04E0 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88DE6AD28F0F34500FB04E0 /* GFEmptyStateView.swift */; };
 		B8B8738128D6919700CA23CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8738028D6919700CA23CA /* AppDelegate.swift */; };
 		B8B8738328D6919700CA23CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8738228D6919700CA23CA /* SceneDelegate.swift */; };
 		B8B8738A28D6919800CA23CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8B8738928D6919800CA23CA /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		B81DADEE28E8CA3F00FB46A8 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		B88DE6AD28F0F34500FB04E0 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		B8B8737D28D6919700CA23CA /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B8738028D6919700CA23CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8B8738228D6919700CA23CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				B8B8739A28D906D300CA23CA /* GFTextField.swift */,
 				B8B8739E28D93A5E00CA23CA /* GFTitleLabel.swift */,
 				B8B873B828DA5BA700CA23CA /* GFAvatarImageView.swift */,
+				B88DE6AD28F0F34500FB04E0 /* GFEmptyStateView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				B8B873A528D94E7800CA23CA /* UIViewController-Extension.swift in Sources */,
 				B8B873AC28D9D78B00CA23CA /* Follower.swift in Sources */,
 				B8B8739F28D93A5E00CA23CA /* GFTitleLabel.swift in Sources */,
+				B88DE6AE28F0F34500FB04E0 /* GFEmptyStateView.swift in Sources */,
 				B8B873B128D9F7EB00CA23CA /* NetworkManager.swift in Sources */,
 				B8B8738128D6919700CA23CA /* AppDelegate.swift in Sources */,
 				B8B8739728D6998200CA23CA /* FavoritesListViewController.swift in Sources */,

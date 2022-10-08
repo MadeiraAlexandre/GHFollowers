@@ -46,14 +46,26 @@ class FollowersListViewController: UIViewController {
     }
     
     private func getFollowers(username: String, page: Int) {
+        showLoadingView()
         Task {
             do {
                 let followers = try await NetworkManager.shared.getFollowers(for: username, page: page)
                 if followers.count < 100 { self.hasMoreFollowers = false }
                 self.followers.append(contentsOf: followers)
+                if self.followers.isEmpty {
+                    DispatchQueue.main.async {
+                        self.dismissLoadingView()
+                        self.showEmptyStateView(with: "No Followers.", in: self.view)
+                    }
+                    return
+                }
                 updateData()
+                self.dismissLoadingView()
             } catch {
-                self.presentGFAlertOnMainThread(title: "Error", message: error.localizedDescription, buttonTitle: "OK")
+                self.dismissLoadingView()
+                self.presentGFAlertOnMainThread(title: "Error",
+                                                message: error.localizedDescription,
+                                                buttonTitle: "OK")
             }
         }
     }
