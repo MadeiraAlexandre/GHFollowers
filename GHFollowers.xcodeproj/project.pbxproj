@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B81DADEF28E8CA3F00FB46A8 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81DADEE28E8CA3F00FB46A8 /* UIHelper.swift */; };
+		B857C0E9290566DB00950F12 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857C0E8290566DB00950F12 /* UserInfoViewController.swift */; };
 		B88DE6AE28F0F34500FB04E0 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88DE6AD28F0F34500FB04E0 /* GFEmptyStateView.swift */; };
 		B8B8738128D6919700CA23CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8738028D6919700CA23CA /* AppDelegate.swift */; };
 		B8B8738328D6919700CA23CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B8738228D6919700CA23CA /* SceneDelegate.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		B81DADEE28E8CA3F00FB46A8 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		B857C0E8290566DB00950F12 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		B88DE6AD28F0F34500FB04E0 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		B8B8737D28D6919700CA23CA /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8B8738028D6919700CA23CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				B8B8739628D6998200CA23CA /* FavoritesListViewController.swift */,
 				B8B8739C28D916A000CA23CA /* FollowersListViewController.swift */,
 				B8B8739428D6995800CA23CA /* SearchViewController.swift */,
+				B857C0E8290566DB00950F12 /* UserInfoViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				B88DE6AE28F0F34500FB04E0 /* GFEmptyStateView.swift in Sources */,
 				B8B873B128D9F7EB00CA23CA /* NetworkManager.swift in Sources */,
 				B8B8738128D6919700CA23CA /* AppDelegate.swift in Sources */,
+				B857C0E9290566DB00950F12 /* UserInfoViewController.swift in Sources */,
 				B8B8739728D6998200CA23CA /* FavoritesListViewController.swift in Sources */,
 				B8B8738328D6919700CA23CA /* SceneDelegate.swift in Sources */,
 			);
