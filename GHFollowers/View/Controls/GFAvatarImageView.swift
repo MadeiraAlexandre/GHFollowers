@@ -26,7 +26,8 @@ class GFAvatarImageView: UIImageView {
         translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func loadImage(for value: String) {
+    func loadImage(for value: String?) {
+        guard let value else { return }
         let cacheKey = NSString(string: value)
         if let image = cache.object(forKey: cacheKey) {
             self.image = image

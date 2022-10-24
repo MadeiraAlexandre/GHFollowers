@@ -9,6 +9,6 @@ import Foundation
 
 struct User: Codable {
     let login: String
-    let name, location, twitterUsername, email, bio, avatarUrl, htmlUrl, followersUrl, followingUrl: String?
-    let publicRepos, publicGists, followers, following: Int?
+    var name, location, twitterUsername, email, bio, avatarUrl, htmlUrl, followersUrl, followingUrl: String?
+    var publicRepos, publicGists, followers, following: Int?
 }
